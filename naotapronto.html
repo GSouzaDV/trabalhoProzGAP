@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>MusicMatch</title>
+</head>
+
+<body class="bg-zinc-900 min-h-screen flex justify-between items-center text-white">
+    <aside class="p-8 border-2 border-cyan-400 rounded-e-xl border-s-transparent w-52s">
+        <h2 class="text-2xl font-semibold">NÃO GOSTUEI</h2>
+        <ul id="nao" class="text-red-500 text-lg"></ul>
+    </aside>
+
+    <main class="flex justify-center w-fit h-fit p-8 justify-items rounded-xl border-2 border-cyan-400">
+        <div class="flex flex-col items-center gap-2">
+            <img class="w-16 h-12" src="img/logo.png" alt="Logo">
+
+            <h1>Music<b>Match</b></h1>
+
+            <div id="card-container">
+                <div id="card" class="bg-cover">
+                    <img id="album-cover" src="" alt="Capa do Álbum" width="308px" height="308px">
+                </div>
+            </div>
+
+            <h2 class="text-2xl font-medium" id="title"></h2>
+            <h3 class="text-md" id="artist"></h3>
+
+            <input type="range" id="controleTempo" class="w-10/12 cursor-pointer" min="0" max="100" step="1" value="0"
+                oninput="ajustarTempo()">
+            <audio id="audio" class="hidden"></audio>
+
+            <div id="buttons" class="flex justify-evenly items-center w-full font-bold text-2xl">
+                <button onclick="x()">🤢</button>
+                <button id="playButton" onclick="playPause()">▶</button>
+                <button onclick="s2()">❤️</button>
+            </div>
+        </div>
+    </main>
+
+    <aside class="p-8 text-right border-2 border-cyan-400 rounded-s-xl border-e-transparent w-52">
+        <h2 class="text-2xl font-semibold">ASMEI</h2>
+        <ul id="sim" class="text-green-500 text-lg"></ul>
+    </aside>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
